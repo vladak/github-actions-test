@@ -31,3 +31,7 @@ jobs:
         env:
           MATRIX_CONTEXT: ${{ toJson(matrix) }}
         run: echo "$MATRIX_CONTEXT"
+      - name: Display OS name
+        env:
+           OS: ${{ runner.os }}
+        run: echo "$OS"
