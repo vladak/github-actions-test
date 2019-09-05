@@ -35,3 +35,6 @@ jobs:
         env:
            OS: ${{ runner.os }}
         run: echo "$OS"
+      - name: macOS specific step
+        if: ${{ runner.os }} == "macOS"
+        run: echo "Apple !"
