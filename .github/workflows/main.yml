@@ -1,11 +1,11 @@
 on: push
 
 jobs:
-  runs-on: ${{ matrix.os }}
-  strategy:
-    matrix:
-      os: [ubuntu-14.04, ubuntu-18.04]
   one:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-14.04, ubuntu-18.04]
     steps:
       - name: Dump GitHub context
         env:
